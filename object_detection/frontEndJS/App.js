@@ -1,11 +1,11 @@
 // * TensorFlow Stuff
-import * as tf from "@tensorflow/tfjs-node";
-import coco_ssd from "@tensorflow-models/coco-ssd";
+const tf = require("@tensorflow/tfjs-node");
+const coco_ssd = require("@tensorflow-models/coco-ssd");
 
 // * Server Stuff
-import express from "express";
-import busboy from "busboy";
-import { config } from "dotenv";
+const express = require("express");
+const busboy = require("busboy");
+const { config } = require("dotenv");
 config();
 
 // * Init Model
@@ -18,7 +18,7 @@ let model = undefined;
 
 // * Init Express
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.use(express.json());
 
 app.post("/predict", (req, res) => {
