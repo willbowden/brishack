@@ -1,3 +1,4 @@
 datasets/dataset
 object_detection/node_modules
 object_detection/src/node_modules
+object_detection/frontEndJS/node_modules

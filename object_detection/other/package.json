@@ -1,0 +1,15 @@
+{
+  "name": "object_detection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "imageDetection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow/tfjs-node": "^4.2.0"
+  }
+}

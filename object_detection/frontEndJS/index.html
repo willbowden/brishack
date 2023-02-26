@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple Express Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>Simple Express Example</h1>
+    <div id="data"></div>
+    <script>
+      $.get("/data", function(response) {
+        $("#data").text(response);
+      });
+    </script>
+  </body>
+</html>
