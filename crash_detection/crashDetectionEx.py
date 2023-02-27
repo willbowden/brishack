@@ -2,7 +2,6 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-import data
 
 # define the maximum sequence length (i.e., maximum number of vehicles)
 max_sequence_length = 100
