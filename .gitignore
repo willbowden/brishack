@@ -3,4 +3,4 @@ object_detection/node_modules
 object_detection/src/node_modules
 object_detection/frontEndJS/node_modules
 crash_detection/TensorFlow/
-crash_detection/data/ccd/
+crash_detection/data/ccd_accidents/
