@@ -2,6 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+import data
 
 # define the maximum sequence length (i.e., maximum number of vehicles)
 max_sequence_length = 100
@@ -20,12 +21,8 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 
 # generate some example data (assuming a list of lists for the input)
 # input_data is a list of input samples, where each input sample is a list of tuples (x, y, height, width) for each vehicle
-input_data = [
-    [(10, 20, 30, 40), (20, 30, 40, 50), (30, 40, 50, 60)],
-    [(15, 25, 35, 45), (25, 35, 45, 55), (35, 45, 55, 65)],
-    [(20, 30, 40, 50), (30, 40, 50, 60), (40, 50, 60, 70)]
-]
-labels = [[0, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 1]]
+input_data = data
+labels = [[1,0,0,0],[0, 1, 0, 0],[0, 0, 1, 0],  [0, 0, 0, 1]]
 
 # pad the input data to the maximum sequence length
 padded_input_data = pad_sequences(input_data, maxlen=max_sequence_length, padding='post', dtype='float32')
